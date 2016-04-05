@@ -1,0 +1,251 @@
+@font-face{
+    font-family:pt;
+    src:url(../font/PTS55F.ttf),
+        url(../font/PTS55F.eot);
+}
+@font-face{
+    font-family:Lato;
+    src:url(../font/LatoLatin-Light.ttf);
+}
+@font-face{
+    font-family:Latohair;
+    src:url(../font/Lato-Hairline.ttf);
+}
+html, body, #flexbox, .level1, .level2 {
+    height:100%;
+    font-family:"Lato","pt",sans-serif;
+}
+#loading {
+    position:absolute;
+    z-index:50;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:#155c70;
+}
+#load{stroke:#fff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;fill:#155c70;position:absolute;top:50%;left:50%;margin-top:-150px;margin-left:-440px;}
+#m{stroke-dasharray:2000; stroke-dashoffset:2000;animation: m-stroke 2s ease-in-out forwards;-webkit-animation: m-stroke 2s ease-in-out forwards;} 
+@keyframes m-stroke { 100% {stroke-dashoffset: 0;}} @-webkit-keyframes m-stroke {100% {stroke-dashoffset: 0;}}
+#a1{stroke-dasharray:1000;stroke-dashoffset:1000;animation: path-stroke 1.5s ease-in-out 1.8s forwards;-webkit-animation: path-stroke 1.5s ease-in-out 1.8s forwards;} 
+@keyframes path-stroke{0%{visibility:hidden}100%{stroke-dashoffset:0;visibility:visible}} @-webkit-keyframes path-stroke{0%{visibility:hidden}100%{stroke-dashoffset:0;visibility:visible}}
+#t{stroke-dasharray:1000;stroke-dashoffset:1000;animation: path-stroke 1.5s ease-in-out 3s forwards;-webkit-animation: path-stroke 1.5s ease-in-out 3s forwards;}
+#i{stroke-dasharray:1000;stroke-dashoffset:1000;animation: path-stroke 1.5s ease-in-out 3.5s forwards;-webkit-animation: path-stroke 1.5s ease-in-out 3.5s forwards;}
+#l{stroke-dasharray:1000;stroke-dashoffset:1000;animation: path-stroke 1.5s ease-in-out 4.3s forwards;-webkit-animation: path-stroke 1.5s ease-in-out 4.3s forwards;}
+#d{stroke-dasharray:1000;stroke-dashoffset:1000;animation: path-stroke 1.5s ease-in-out 5.3s forwards;-webkit-animation: path-stroke 1.5s ease-in-out 5.3s forwards;}
+#a2{stroke-dasharray:1000;stroke-dashoffset:1000;animation: path-stroke 1.5s ease-in-out 6.5s forwards;-webkit-animation: path-stroke 1.5s ease-in-out 6.5s forwards;}
+#s, #cv {stroke-width:2;}
+#s{stroke-dasharray:500;stroke-dashoffset:500;animation: path-stroke 1s ease-in-out 8s forwards;-webkit-animation: path-stroke 1s ease-in-out 8s forwards;}
+#cv{stroke-dasharray:500;stroke-dashoffset:500;animation: path-stroke 1s ease-in-out 8s forwards;-webkit-animation: path-stroke 1s ease-in-out 8s forwards;}
+div, ul, li, section, h1, p {                
+    margin:0;
+    padding:0;
+} 
+ #lang_nav {
+    text-align: center;
+    list-style-type: none;
+    width: 100px;
+    position:absolute;
+    top:5px;
+    left:20px;
+    z-index:10;      
+}
+.active {
+    border:solid 1px #fff;
+}               
+#lang_nav li {
+    display:block;
+    padding:5px;
+    margin:5px;
+    width:20px;
+    height:20px;
+    border-radius:4px;
+}
+#lang_nav li a {
+    color:#fff;
+    text-decoration:none;
+}
+.icon {
+    font-family:"pt",sans-serif;
+    position:absolute;
+    top:35%;
+    left:-100px;
+    z-index:10;
+    width:30px;
+    height:30px;
+    display:none;        
+}
+.icon .menu {
+    position:absolute;
+    top:-3px;
+    left:-3px;
+    width:37px;
+    height:37px;
+    z-index:20;
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); 	/* IE 9 */
+    -moz-transform:rotate(90deg); 	/* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg);   
+}
+.icon .menu hr {
+    width:25px;
+    margin:6px;
+}
+.icon .cross {
+    display:none;
+}
+.icon .cross hr.cross_top {
+    width:25px;
+    position:absolute;
+    z-index:15;
+    top:5px;
+    left:2px;;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); 	/* IE 9 */
+    -moz-transform:rotate(45deg); 	/* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(45deg);          
+}
+.icon .cross hr.cross_bottom {
+    width:25px;
+    margin-top:13px;
+    margin-left:1px;
+    transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg); 	/* IE 9 */
+    -moz-transform:rotate(-45deg); 	/* Firefox */
+    -webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(-45deg); 
+}
+.hasborder {
+    border:solid #fff 1px;
+}
+.row {
+    display:flex;
+    display:-webkit-flex;   
+}
+.level1 {
+    width:20%;
+    overflow:hidden;    
+    text-align: right;
+    vertical-align: bottom;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;   
+}
+.level2 {
+    position:relative;
+    width:50%;
+    overflow:hidden;
+    color: #EFEFEF;
+}
+.level2 h1 {
+    font-family:"Latohair","pt",sans-serif;
+    position:absolute;
+    top:55%;
+    font-size:3em;
+    white-space:nowrap;    
+}
+.level2 h1 span:first-child {
+    font-size:3em;
+}
+div.content {
+    text-align:left;
+    position:relative;
+    top:100%;
+    width:60%;
+    left:320px;
+    padding-bottom:100px;    
+    font-size:1.5em;
+    line-height:1em;    
+}
+#about_me img {
+    width:250px;    
+    float:left;
+    height:250px;
+    margin:0 50px 50px 0;
+    border-radius:130px;
+    border:8px solid #EFEFEF;
+}
+ #about_me #infor{
+    float:left;
+    width:350px;
+}   
+#about_me #desc{
+    clear:both;
+}
+ #about_me{
+    background-image:url(../image/aboutmeweb.jpg);
+}
+#be_passionate {
+    background-image:url(../image/passionateweb.jpg);
+}
+#contact {
+    background-image:url(../image/contactmeweb.jpg);
+}
+#demo {
+    background-image:url(../image/demoweb.jpg);
+}
+#education {
+    background-image:url(../image/educationweb.jpg);
+}
+#green {
+    background-color:#16271A; 
+    opacity:0.8;
+}
+#camel {
+    background-color:#736F33;
+    opacity:0.8;
+}
+#grey {
+    background-color:#313131;
+    opacity:0.8;
+}
+#dark {
+    background-color:#000000;
+    opacity:0.8;
+}
+#blue {
+    background-color:#6B8590;
+    opacity:0.8;
+}
+@media screen and (max-width: 640px) {
+html, body, div#flexbox, .level1, .level2 {
+    width:100%;
+    font-family:"Lato","pt",sans-serif;
+}
+#lang_nav {
+    display:none;      
+}
+.column {
+    display:flex;
+    display:-webkit-flex;
+    flex-direction:column;
+}
+.level1 {
+    width:100%;   
+    overflow:hidden; 
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;   
+}
+.level2 h1 {
+    font-family:"Latohair","pt",sans-serif;
+    position:absolute;
+    top:0;
+    left:5px;
+    font-size:2em;
+    white-space:nowrap;
+}
+div.content {
+    font-size:1em;
+    line-height:1em;
+    left:150px;    
+}
+#about_me img {
+    width:180px;
+    height:180px;
+    border-radius:95px;
+    border:4px solid #EFEFEF;
+}
+}
