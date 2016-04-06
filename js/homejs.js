@@ -4,7 +4,7 @@
   var c=0;
   var t;
   function hideLoad(){
-       if(c<8){
+       if(c<9){
             c=c+1;
             t=setTimeout("hideLoad()",1000);
        } else {
