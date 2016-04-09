@@ -1,10 +1,7 @@
-/**                           
- * Created by Administrator on 2016/3/16.
- */
   var c=0;
   var t;
   function hideLoad(){
-       if(c<9){
+       if(c<8){
             c=c+1;
             t=setTimeout("hideLoad()",1000);
        } else {
@@ -189,25 +186,34 @@ $(document).ready(function(){
                 back.stopPropogation();
            };
       });
+      $(".icon_group").hover(function(){          
+             $(this).find(".social_icon").stop(true,false).slideToggle(500).find("img").stop(true,false).slideToggle(500); 
+      });
       //more adaptation
       $(window).resize(function(){
            if(!$(".icon_js").is(":visible")){  
                 position();
            } else if($(".icon_js").is(":visible")){
                 if($(window).width()>960){
-                       $(".icon_js").css({"left":$("h1").children("span:eq(0)").width(),"top":"40%"})
-                              .next().find("h1").css({"position":"fixed","top":"20%","font-size":"1.8em"})
-                              .find("span:eq(0)").css({"font-size":"3em"});                  
+                       $(".icon_js").css({"left":$("h1").children("span:eq(0)").width(),"top":"40%"});
+                       if(!$(".strech_js").width()==0){
+                              $(this).find(".strech_js").css({"position":"fixed","top":"20%","font-size":"1.8em"})
+                                     .find("span:eq(0)").css({"font-size":"3em"});
+                       };                  
                 };          
                 if($(window).width()>640&&$(window).width()<=960){    
-                       $(".icon_js").css({"left":$("h1").children("span:eq(0)").width(),"top":"40%"})
-                             .next().find("h1").css({"position":"fixed","top":"20%","font-size":"1.8em"})
-                             .find("span:eq(0)").css({"font-size":"3em"});                              
+                       $(".icon_js").css({"left":$("h1").children("span:eq(0)").width(),"top":"40%"});
+                       if(!$(".strech_js").width()==0){
+                             $(this).find("h1:visible").css({"position":"fixed","top":"20%","font-size":"1.8em"})
+                             .find("span:eq(0)").css({"font-size":"3em"});
+                       };                              
                 };           
                 if($(window).width()<=640){
-                       $(".icon_js").css({"left":"20px","top":"80%"})
-                             .next().find("h1").css({"position":"absolute","top":"0","font-size":"2em"})
-                             .find("span:eq(0)").css({"font-size":"1em"});                  
+                       $(".icon_js").css({"left":"20px","top":"80%"});
+                       if(!$(".strech_js").width()==0){
+                             $(this).find("h1").css({"position":"absolute","top":"0","font-size":"2em"})
+                             .find("span:eq(0)").css({"font-size":"1em"});
+                       };                  
                 };
            };                                      
       });                                
