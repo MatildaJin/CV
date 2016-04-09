@@ -16,6 +16,9 @@ html, body, #flexbox, .level1, .level2 {
     font-family:"Lato","pt",sans-serif;
     overflow:hidden;
 }
+a {
+    font-family:"pt",sans-serif;
+}
 #loading {
     position:absolute;
     z-index:50;
@@ -25,7 +28,8 @@ html, body, #flexbox, .level1, .level2 {
     height:100%;
     background-color:#155c70;
 }
-#load{stroke:#fff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;fill:#155c70;position:absolute;top:50%;left:50%;margin-top:-150px;margin-left:-440px;}
+#load{stroke:#fff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;fill:#155c70;
+      position:absolute;top:50%;left:50%;-webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);transform: translate(-50%, -50%);}
 #m{stroke-dasharray:2000; stroke-dashoffset:2000;animation: m-stroke 2s ease-in-out forwards;-webkit-animation: m-stroke 2s ease-in-out forwards;} 
 @keyframes m-stroke { 100% {stroke-dashoffset: 0;}} @-webkit-keyframes m-stroke {100% {stroke-dashoffset: 0;}}
 #a1{stroke-dasharray:1000;stroke-dashoffset:1000;animation: path-stroke 1.5s ease-in-out 1.8s forwards;-webkit-animation: path-stroke 1.5s ease-in-out 1.8s forwards;} 
@@ -35,7 +39,7 @@ html, body, #flexbox, .level1, .level2 {
 #l{stroke-dasharray:1000;stroke-dashoffset:1000;animation: path-stroke 1.5s ease-in-out 4.3s forwards;-webkit-animation: path-stroke 1.5s ease-in-out 4.3s forwards;}
 #d{stroke-dasharray:1000;stroke-dashoffset:1000;animation: path-stroke 1.5s ease-in-out 5.3s forwards;-webkit-animation: path-stroke 1.5s ease-in-out 5.3s forwards;}
 #a2{stroke-dasharray:1000;stroke-dashoffset:1000;animation: path-stroke 1.5s ease-in-out 6.5s forwards;-webkit-animation: path-stroke 1.5s ease-in-out 6.5s forwards;}
-#s, #cv {stroke-width:2;}
+#s, #cv {stroke-width:4;}
 #s{stroke-dasharray:500;stroke-dashoffset:500;animation: path-stroke 1s ease-in-out 8s forwards;-webkit-animation: path-stroke 1s ease-in-out 8s forwards;}
 #cv{stroke-dasharray:500;stroke-dashoffset:500;animation: path-stroke 1s ease-in-out 8s forwards;-webkit-animation: path-stroke 1s ease-in-out 8s forwards;}
 div, ul, li, section, h1, p {                
@@ -67,7 +71,6 @@ div, ul, li, section, h1, p {
     text-decoration:none;
 }
 .icon {
-    font-family:"pt",sans-serif;
     position:absolute;
     top:35%;
     left:-100px;
@@ -123,10 +126,13 @@ div, ul, li, section, h1, p {
 }
 .row {
     display:flex;
-    display:-webkit-flex;   
+    display:-webkit-flex;
+    flex-direction:row;   
 }
 .level1 {
-    width:20%;
+    width:20%;    
+    text-align: right;
+    vertical-align: bottom;
     background-repeat:no-repeat;
     background-position:center;
     background-size:cover;   
@@ -156,6 +162,21 @@ div.content {
     font-size:1.5em;
     line-height:1em;    
 }
+.emp{
+    padding:5px;
+    margin:5px 50px 5px 50px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1.5em;
+    color:#16D69C;
+    border-radius:5px;
+}
+a.emp:hover {
+    color:#FFC12E;
+}
+#contact a {
+    display:block;
+}
 #about_me img {
     width:250px;    
     float:left;
@@ -164,14 +185,48 @@ div.content {
     border-radius:130px;
     border:8px solid #EFEFEF;
 }
- #about_me #infor{
+#about_me #infor{
     float:left;
     width:350px;
+    margin:0 0 30px 0;
 }   
 #about_me #desc{
     clear:both;
 }
- #about_me{
+#links {
+    text-align:center;
+    margin:15px;
+}
+ul {
+    list-style-type:none;
+}
+.social_wrapper {
+    margin:5px 50px 5px 50px;
+}
+.social_wrapper ul {
+    display:inline-block;    
+    overflow:hidden;
+    border-radius:15px;
+    width:50px;
+    height:50px;    
+}
+.social_wrapper li {
+    overflow:hidden;
+    border-radius:15px;
+    width:50px;
+    height:50px;
+}
+.social_icon img {
+    opacity:0.5;
+}
+.social_search {
+    opacity:1;
+}
+.social_wrapper img {
+    width:50px;
+    height:50px;
+}
+#about_me{
     background-image:url(../image/aboutmeweb.jpg);
 }
 #be_passionate {
@@ -179,6 +234,7 @@ div.content {
 }
 #contact {
     background-image:url(../image/contactmeweb.jpg);
+    text-align:center;
 }
 #demo {
     background-image:url(../image/demoweb.jpg);
@@ -245,4 +301,4 @@ div.content {
     border-radius:95px;
     border:4px solid #EFEFEF;
 }
-}
+}            
