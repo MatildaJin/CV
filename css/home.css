@@ -250,7 +250,7 @@ ul {
 }
 .skill hr {
     position:absolute;
-    top:0;
+    top:-10px;
     margin-left:-1px;
     width:0;
 }
