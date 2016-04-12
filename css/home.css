@@ -351,7 +351,8 @@ html, body, div#flexbox, .level1, .level2 {
 div.content {
     font-size:1em;
     line-height:1em;
-    left:150px;    
+    left:150px;
+    top:200%;
 }
 #about_me img {
     width:180px;
