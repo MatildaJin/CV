@@ -163,7 +163,7 @@ $(document).ready(function(){
            if($(window).width()<=640){
                 $(this).stop(true,true).fadeOut().css({"left":"-100px"});               
                 $(".slide_js").css({"overflow":"hidden"}).animate({scrollTop:"0"},100)
-                              .find(".content_js").stop(true,true).animate({top:"100%"},500);
+                              .find(".content_js").stop(true,true).animate({top:"200%"},500);
                 $("h1").find("span:eq(0)").animate({fontSize:"3em"},500,function(){                          
                           $(".strech_js").animate({height:"20%"},500,function(){
                                                                   $(this).children().animate({opacity:"0.8"});;                                                                  
