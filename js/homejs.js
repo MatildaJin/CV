@@ -189,6 +189,15 @@ $(document).ready(function(){
       $(".icon_group").hover(function(){          
              $(this).find(".social_icon").stop(true,false).slideToggle(500).find("img").stop(true,false).slideToggle(500); 
       });
+      $(".skill").click(function(){
+             $(this).siblings().find("p").hide();
+             $(this).siblings().find("hr").animate({width:"0"},100,function(){
+                             $(this).removeClass("current_skill");
+                      });            
+             $(this).addClass("current_skill").find("hr").animate({width:"100%"},200,function(){
+                             $(this).prev("p").slideDown();                     
+                    });                                
+      });
       //more adaptation
       $(window).resize(function(){
            if(!$(".icon_js").is(":visible")){  
