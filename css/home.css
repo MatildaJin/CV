@@ -226,6 +226,57 @@ ul {
     width:50px;
     height:50px;
 }
+.skill h2 {
+    font-weight:bold;
+    position:absolute;
+    top:50%;
+    margin-top:-25px;
+    font-size:1em;
+    height:50px;
+    padding:10px 20px 10px 20px;    
+}
+.skill {
+    position:relative;      
+    margin-left:10px;
+    height:100px;
+    width:200px;       
+    border-left:solid 2px;
+    transition:border-left;
+    -webkit-transition:border-left;
+}
+.skill:hover {
+    border-left:solid 6px;
+}
+.current_skill{
+    border-left:solid 6px;
+    width:100%;
+}
+.skill hr {
+    position:absolute;
+    top:-12px;
+    margin-left:-1px;
+    width:0;
+}
+#html, #html hr {
+    border-color:green;
+}
+#css, #css hr {
+    border-color:yellow;
+}
+#js,#js hr {
+    border-color:red;
+}
+#jq, #jq hr {
+    border-color:blue;
+}
+#design, #design hr {
+    border-color:purple;
+}
+.desc {
+    width:60%;
+    float:right;
+    display:none;        
+}
 #about_me{
     background-image:url(../image/aboutmeweb.jpg);
 }
