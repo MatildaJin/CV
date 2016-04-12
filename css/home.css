@@ -197,6 +197,15 @@ a.emp:hover {
     text-align:center;
     margin:15px;
 }
+.link_group{
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-60%, -110%);
+    -moz-transform: translate(-60%, -110%);
+    transform: translate(-60%, -110%);
+    text-align:center;    
+}
 ul {
     list-style-type:none;
 }
