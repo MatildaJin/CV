@@ -1,13 +1,3 @@
-  var c=0;
-  var t;
-  function hideLoad(){
-       if(c<8){
-            c=c+1;
-            t=setTimeout("hideLoad()",1000);
-       } else {
-            $("#loading").fadeOut(1000);
-       }
-  };
       var $title_width;
       if($(window).width()>640){
           $title_width=$(".slide_js").find("span:eq(0)").width();
@@ -36,7 +26,6 @@
            };   
       };    
 $(document).ready(function(){
-      hideLoad();                      
       position();                                         
     //here comes animations when hovering the mouse upon sections
     $("body").hover(function(){                
