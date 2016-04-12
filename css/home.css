@@ -246,9 +246,6 @@ ul {
 }
 .skill:hover {
     border-left:solid 6px;
-}
-.current_skill{
-    border-left:solid 6px;
     width:100%;
 }
 .skill hr {
