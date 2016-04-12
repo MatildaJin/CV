@@ -192,7 +192,7 @@ $(document).ready(function(){
       $(".skill").click(function(){
              $(this).siblings().find("p").hide();
              $(this).siblings().find("hr").animate({width:"0"},100,function(){
-                             $(this).removeClass("current_skill");
+                             $(this).parent().removeClass("current_skill");
                       });            
              $(this).addClass("current_skill").find("hr").animate({width:"100%"},200,function(){
                              $(this).prev("p").slideDown();                     
