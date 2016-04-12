@@ -189,14 +189,18 @@ $(document).ready(function(){
       $(".icon_group").hover(function(){          
              $(this).find(".social_icon").stop(true,false).slideToggle(500).find("img").stop(true,false).slideToggle(500); 
       });
-       $(".skill").hover(function(){            
+       $(".skill").hover(function(){
+          if($(window).width()>640){                    
              $(this).find("hr").stop(true).animate({width:"100%"},200,function(){
                              $(this).prev("p").slideDown();                     
-                    });                                
-      },function(){
+                    });
+          };                                                
+       },function(){
+          if($(window).width()>640){                 
              $(this).find("p").hide();
              $(this).find("hr").stop(true).animate({width:"0"},100);
-      }); 
+          };
+       });  
       //more adaptation
       $(window).resize(function(){
            if(!$(".icon_js").is(":visible")){  
