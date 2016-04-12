@@ -144,7 +144,6 @@ $(document).ready(function(){
                                                                   $(this).children().animate({width:"50%",opacity:"0.8"})
                                                                          .find("h1").css({"left":$(".slide_js").width()-$title_width});
                                                           });
-                          position();                                                                                 
                 });
                 back.stopPropogation();
            };
@@ -158,7 +157,6 @@ $(document).ready(function(){
                                                                   $(this).children().animate({width:"100%",opacity:"0.8"})
                                                                          .find("h1").css({"left":$(".slide_js").width()-$title_width});
                                                           });
-                          position();                                                                                 
                 });
                 back.stopPropogation();
            };
@@ -170,7 +168,6 @@ $(document).ready(function(){
                           $(".strech_js").animate({height:"20%"},500,function(){
                                                                   $(this).children().animate({opacity:"0.8"});;                                                                  
                                                           });
-                          position();                                                                                 
                 });
                 back.stopPropogation();
            };
