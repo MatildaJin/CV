@@ -149,6 +149,9 @@ div, ul, li, section, h1, p {
     font-size:3em;
     white-space:nowrap;    
 }
+.hide {
+    display:none;
+}
 .level2 h1 span:first-child {
     font-size:3em;
 }
